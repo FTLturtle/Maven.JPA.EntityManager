@@ -24,7 +24,7 @@ public class MainRunner {
         System.out.println(bookService.findAll());
 
         // Update then Read
-        book.setGenre("Shite");
+        book.setGenre("Total Shite");
         book.setPrice(0.01F);
         bookService.update(book.getId(), book);
         System.out.println(bookService.findById(book.getId()));
