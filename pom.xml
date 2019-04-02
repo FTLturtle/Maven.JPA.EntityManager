@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.zipcode</groupId>
-    <artifactId>Demo</artifactId>
+    <groupId>miller.sunhyun</groupId>
+    <artifactId>JpaEntityManager</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
