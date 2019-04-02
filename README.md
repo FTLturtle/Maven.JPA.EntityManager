@@ -73,5 +73,5 @@ public class CD {
     private Long id;
 
     @OneToMany()
-    private Set<Musician> musicians = new HashSet<>();
+    private Set<Musician> authors = new HashSet<>();
 ```
