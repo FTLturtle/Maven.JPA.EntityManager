@@ -24,8 +24,8 @@ public class MainRunner {
         System.out.println(bookService.findAll());
 
         // Update then Read
-        book.setGenre("Total Shite");
-        book.setPrice(0.01F);
+        book.setGenre("Pretentious Crap");
+        book.setPrice(0.000001F);
         bookService.update(book.getId(), book);
         System.out.println(bookService.findById(book.getId()));
         System.out.println(bookService.findAll());
@@ -45,6 +45,6 @@ public class MainRunner {
         authorSet.add(new Author("Nhu", "Nguyen", (short) 1000, (short) 1019));
         authorSet.add(new Author("Kris", "Younger", (short) 1000, (short) 1019));
 
-        return new Book("The Zipcode Manifesto", (short) 2015, 1000000.0F, "1234567890", "Wisdom Literature", 1000000000L, authorSet);
+        return new Book("The Zipcode Manifesto", (short) 2015, 10000F, "1234567890", "Wisdom Literature", 1000000000L, authorSet);
     }
 }
