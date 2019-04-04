@@ -31,9 +31,9 @@ public class MainRunner {
         System.out.println(bookService.findAll());
 
         // Delete then Read
-//        bookService.delete(book.getId());
-//        System.out.println(bookService.findById(book.getId()));
-//        System.out.println(bookService.findAll());
+        bookService.delete(book.getId());
+        System.out.println(bookService.findById(book.getId()));
+        System.out.println(bookService.findAll());
     }
 
     private static Book createNewBook() {
