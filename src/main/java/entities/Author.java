@@ -1,6 +1,8 @@
 package entities;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class Author {
@@ -21,14 +23,18 @@ public class Author {
     @Column(name = "Age")
     protected Short age;
 
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Set<Book> books = new HashSet<>();
+
     public Author() {
     }
 
-    public Author(String firstName, String lastName, Short birthYear, Short age) {
+    public Author(String firstName, String lastName, Short birthYear, Short age, Set<Book> books) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthYear = birthYear;
         this.age = age;
+        this.books = books;
     }
 
     public Long getId() {
@@ -71,8 +77,18 @@ public class Author {
         return age;
     }
 
-    public void setAge(Short age) {
+    public Author setAge(Short age) {
         this.age = age;
+        return this;
+    }
+
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public Author setBooks(Set<Book> books) {
+        this.books = books;
+        return this;
     }
 
     @Override

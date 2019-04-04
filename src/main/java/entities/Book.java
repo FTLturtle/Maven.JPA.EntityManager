@@ -4,8 +4,6 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-import static javax.persistence.CascadeType.ALL;
-
 @Entity
 public class Book {
     @Id
@@ -30,9 +28,7 @@ public class Book {
     @Column(name = "WordCount")
     private Long wordCount;
 
-    //@OneToMany()
-    @OneToMany(cascade = ALL, fetch = FetchType.EAGER) // {PERSIST, REMOVE, MERGE, ALL}, EAGER || LAZY
-    //@JoinColumn(name = "cd_fk")
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Author> authors = new HashSet<>();
 
     public Book() {

@@ -83,22 +83,4 @@ public class BookService {
         entityTransaction.commit();
     }
 
-//    public Book raiseUnitCost(Long id, Float raise) {
-//        Book book = entityManager.find(Book.class, id);
-//        if (book != null) {
-//            entityTransaction.begin();
-//            book.setCost(book.getCost() + raise);
-//            entityTransaction.commit();
-//        }
-//        return book;
-//    }
-//
-//    public Book raiseUnitCost(Book book, Float raise) {
-//        Book bookToBeUpdated = entityManager.merge(book);
-//
-//        entityTransaction.begin();
-//        bookToBeUpdated.setCost(bookToBeUpdated.getCost() + raise);
-//        entityTransaction.commit();
-//        return book;
-//    }
 }
